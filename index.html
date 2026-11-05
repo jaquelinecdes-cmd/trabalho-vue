@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domus Mariae - Camisetas Católicas</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+   
+    <header class="header">
+  <div class="logo-titulo">
+    <img src="imagens/logotipo.jpg" alt="Logo Domus Mariae" class="img-logo">
+    <h1>Domus Mariae</h1>
+  </div>
+  <div class="carrinho">
+    <span> Itens no carrinho: <strong>{{ totalCarrinho }}</strong></span>
+  </div>
+</header>
+
+    <main class="container">
+      
+      <section class="busca-container">
+        <input 
+          type="text" 
+          v-model="termoBusca" 
+          placeholder="Buscar camisetas (ex: Totus Tuus, Sagrado Coração)..." 
+          class="input-busca"
+        >
+      </section>
+
+            <section class="produtos-grid">
+        <product-card 
+          v-for="produto in produtosFiltrados" 
+          :key="produto.id"
+          :nome="produto.nome"
+          :preco="produto.preco"
+          :imagem="produto.imagem"
+          @adicionar="adicionarAoCarrinho"
+        ></product-card>
+      </section>
+
+            <p v-if="produtosFiltrados.length === 0" class="sem-resultados">
+        Nenhuma camiseta encontrada com esse nome.
+      </p>
+    </main>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

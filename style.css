@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6; /* Fundo geral suave */
+  color: #4a5568;            /* Texto com tom aconchegante */
+}
+
+/* Cabeçalho (Azul Celeste Suave - tema mariano) */
+.header {
+  background-color: #79a2cb; 
+  color: #ffffff;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(121, 162, 203, 0.2);
+}
+
+/* Estilo para a logo no cabeçalho */
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.img-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Caixa do Carrinho */
+.carrinho {
+  background-color: #ffffff;
+  color: #5c7f9e;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-weight: 500;
+}
+
+/* Layout Principal */
+.container {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Campo de Busca */
+.busca-container {
+  margin-bottom: 2.5rem;
+}
+
+.input-busca {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  border: 1px solid #d2dedf;
+  border-radius: 12px;
+  outline: none;
+  background-color: #ffffff;
+  color: #4a5568;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-busca:focus {
+  border-color: #79a2cb;
+  box-shadow: 0 0 0 3px rgba(121, 162, 203, 0.25);
+}
+
+/* Grid de Produtos */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Card do Produto (Estilo Algodão Doce / Tons Pastéis) */
+.card-produto {
+  background-color: #ffffff;
+  border: 1px solid #eaeef1;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-produto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(121, 162, 203, 0.15);
+}
+
+/* Imagem do Produto */
+.imagem-produto {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #f7f9fa;
+}
+
+.card-produto h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Preço */
+.preco {
+  font-weight: 600;
+  color: #8fa89b; /* Tom verde-sálvia suave / pastel */
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botão Adicionar ao Carrinho */
+.btn-adicionar {
+  background-color: #a8b8cc; /* Azul pastel suave */
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-adicionar:hover {
+  background-color: #79a2cb; /* Tom de azul ligeiramente mais forte no hover */
+}
+
+.btn-adicionar:active {
+  transform: scale(0.98);
+}
+
+/* Mensagem de Sem Resultados */
+.sem-resultados {
+  text-align: center;
+  color: #8c9ba5;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
